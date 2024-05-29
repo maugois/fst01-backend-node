@@ -1,7 +1,7 @@
 import pkg from 'mongoose';
 const { connect, connection, disconnect } = pkg;
 
-const uri = "mongodb+srv://mauriciogoiskonecta:KOYHnjFyzsk2gLWO@dbnosql.gw7vp2o.mongodb.net/firstNoSQL?retryWrites=true&w=majority&appName=DBNoSQL";
+const uri = process.env.MONGO_DB_URL;
 
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
